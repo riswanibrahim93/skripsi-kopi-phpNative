@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="range-slider-css.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+    	<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		  Launch demo modal
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <h5 class="text-center">Flavor</h5>
+				<!-- <h3>JS used for color-change and % label</h3> -->
+				<input type="range" class="flavor" id="flavor" name="flavor" value="0">
+				<div id="h4-container"><div id="h4-subcontainer"><h4 class="bobot-flavor">0<span></span></h4></div></div>
+
+				<h5 class="text-center">Body</h5>
+				<!-- <h3>JS used for color-change and % label</h3> -->
+				<input type="range" class="body" id="body" name="body" value="0">
+				<div id="h4-container"><div id="h4-subcontainer"><h4 class="bobot-body">0<span></span></h4></div></div>
+
+				<h5 class="text-center">Sweetness</h5>
+				<!-- <h3>JS used for color-change and % label</h3> -->
+				<input type="range" class="sweetness" id="sweetness" name="sweetness" value="0">
+				<div id="h4-container"><div id="h4-subcontainer"><h4 class="bobot-sweetness">0<span></span></h4></div></div>
+
+				<h5 class="text-center">Acidity</h5>
+				<!-- <h3>JS used for color-change and % label</h3> -->
+				<input type="range" class="acidity" id="acidity" name="acidity" value="0">
+				<div id="h4-container"><div id="h4-subcontainer"><h4 class="bobot-acidity">0<span></span></h4></div></div>
+
+				<h5 class="text-center">After Taste</h5>
+				<!-- <h3>JS used for color-change and % label</h3> -->
+				<input type="range" class="after_taste" id="after_taste" name="after_taste" value="0">
+				<div id="h4-container"><div id="h4-subcontainer"><h4 class="bobot-after_taste">0<span></span></h4></div></div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" onclick="rekomendasi()" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(function() {
+			// var rangePercent_flavor = $('.flavor').val();
+			function Bobot(rangePercent){
+				if(Math.round(rangePercent) < 15){
+					bobot = 1;
+				}
+				else if(Math.round(rangePercent) < 35){
+					bobot = 2;
+				}
+				else if(Math.round(rangePercent) < 65){
+					bobot = 3;
+				}
+				else if(Math.round(rangePercent) <= 100){
+					bobot = 4;
+				}
+				return bobot;
+			}
+
+			$('.flavor').on('change input', function() {
+				rangePercent_flavor = $('.flavor').val();
+				var bobotFlavor = Bobot(rangePercent_flavor);
+				$('.bobot-flavor').html(bobotFlavor+'<span></span>');
+				$('.flavor, .bobot-flavor').css('filter', 'hue-rotate('+(30+rangePercent_flavor)+'deg)');
+				// $('h4').css({'transform': 'translateX(calc(-50% - 20px)) scale(' + (1+(rangePercent_flavor/100)) + ')', 'left': rangePercent_flavor+'%'});
+				$('.bobot-flavor').css({'transform': 'translateX(-50%) scale(' + (1+(rangePercent_flavor/100)) + ')', 'left': rangePercent_flavor+'%'});
+			});
+
+			$('.body').on('change input', function() {
+				rangePercent_body = $('.body').val();
+				var bobotBody = Bobot(rangePercent_body);
+				$('.bobot-body').html(bobotBody+'<span></span>');
+				$('.body, .bobot-body').css('filter', 'hue-rotate('+(60+rangePercent_body)+'deg)');
+				// $('h4').css({'transform': 'translateX(calc(-50% - 20px)) scale(' + (1+(rangePercent_body/100)) + ')', 'left': rangePercent_body+'%'});
+				$('.bobot-body').css({'transform': 'translateX(-50%) scale(' + (1+(rangePercent_body/100)) + ')', 'left': rangePercent_body+'%'});
+			});
+
+			$('.sweetness').on('change input', function() {
+				rangePercent_sweetness = $('.sweetness').val();
+				var bobotSweetness = Bobot(rangePercent_sweetness);
+				$('.bobot-sweetness').html(bobotSweetness+'<span></span>');
+				$('.sweetness, .bobot-sweetness').css('filter', 'hue-rotate('+(90+rangePercent_sweetness)+'deg)');
+				// $('h4').css({'transform': 'translateX(calc(-50% - 20px)) scale(' + (1+(rangePercent_sweetness/100)) + ')', 'left': rangePercent_sweetness+'%'});
+				$('.bobot-sweetness').css({'transform': 'translateX(-50%) scale(' + (1+(rangePercent_sweetness/100)) + ')', 'left': rangePercent_sweetness+'%'});
+			});
+
+			$('.acidity').on('change input', function() {
+				rangePercent_acidity = $('.acidity').val();
+				var bobotAcidity = Bobot(rangePercent_acidity);
+				$('.bobot-acidity').html(bobotAcidity+'<span></span>');
+				$('.acidity, .bobot-acidity').css('filter', 'hue-rotate('+(120+rangePercent_acidity)*2+'deg)');
+				// $('h4').css({'transform': 'translateX(calc(-50% - 20px)) scale(' + (1+(rangePercent_acidity/100)) + ')', 'left': rangePercent_acidity+'%'});
+				$('.bobot-acidity').css({'transform': 'translateX(-50%) scale(' + (1+(rangePercent_acidity/100)) + ')', 'left': rangePercent_acidity+'%'});
+			});
+
+			$('.after_taste').on('change input', function() {
+				rangePercent_after_taste = $('.after_taste').val();
+				var bobotAfterTaste = Bobot(rangePercent_after_taste);
+				$('.bobot-after_taste').html(bobotAfterTaste+'<span></span>');
+				$('.after_taste, .bobot-after_taste').css('filter', 'hue-rotate('+(150+rangePercent_after_taste)*2+'deg)');
+				// $('h4').css({'transform': 'translateX(calc(-50% - 20px)) scale(' + (1+(rangePercent_after_taste/100)) + ')', 'left': rangePercent_after_taste+'%'});
+				$('.bobot-after_taste').css({'transform': 'translateX(-50%) scale(' + (1+(rangePercent_after_taste/100)) + ')', 'left': rangePercent_after_taste+'%'});
+			});
+		});
+
+		function rekomendasi(){
+			let notes = [];
+			notes['flavor'] = 1+(rangePercent_flavor/100);
+			notes['body'] = 1+(rangePercent_body/100);
+			notes['sweetness'] = 1+(rangePercent_sweetness/100);
+			notes['acidity'] = 1+(rangePercent_acidity/100);
+			notes['after_taste'] = 1+(rangePercent_after_taste/100);
+			
+			console.log(notes)
+		}
+
+	</script>
+  </body>
+</html>

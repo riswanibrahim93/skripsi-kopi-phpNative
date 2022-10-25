@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="range-slider-css.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+    	<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		  Launch demo modal
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Rekomendasi Kopi</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		      	<div class="mb-3">
+						  <label for="flavor" class="form-label">Flavor</label>
+						  <br>
+						  <div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="flavor" id="flavor1">
+							  <label class="form-check-label" for="flavor1">1</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="flavor" id="flavor2">
+							  <label class="form-check-label" for="flavor2">2</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="flavor" id="flavor3">
+							  <label class="form-check-label" for="flavor3">3</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="flavor" id="flavor4">
+							  <label class="form-check-label" for="flavor4">4</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="flavor" id="flavor5">
+							  <label class="form-check-label" for="flavor5">5</label>
+							</div>
+						</div>
+						<div class="mb-3">
+						  <label for="body" class="form-label">Body</label>
+						  <br>
+						  <div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="body" id="body1">
+							  <label class="form-check-label" for="body1">1</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="body" id="body2">
+							  <label class="form-check-label" for="body2">2</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="body" id="body3">
+							  <label class="form-check-label" for="body3">3</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="body" id="body4">
+							  <label class="form-check-label" for="body4">4</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="body" id="body5">
+							  <label class="form-check-label" for="body5">5</label>
+							</div>
+						</div>
+						<div class="mb-3">
+						  <label for="sweetness" class="form-label">Sweetness</label>
+						  <br>
+						  <div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="sweetness" id="sweetness1">
+							  <label class="form-check-label" for="sweetness1">1</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="sweetness" id="sweetness2">
+							  <label class="form-check-label" for="sweetness2">2</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="sweetness" id="sweetness3">
+							  <label class="form-check-label" for="sweetness3">3</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="sweetness" id="sweetness4">
+							  <label class="form-check-label" for="sweetness4">4</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="sweetness" id="sweetness5">
+							  <label class="form-check-label" for="sweetness5">5</label>
+							</div>
+						</div>
+						<div class="mb-3">
+						  <label for="acidity" class="form-label">Acidity</label>
+						  <br>
+						  <div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="acidity" id="acidity1">
+							  <label class="form-check-label" for="acidity1">1</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="acidity" id="acidity2">
+							  <label class="form-check-label" for="acidity2">2</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="acidity" id="acidity3">
+							  <label class="form-check-label" for="acidity3">3</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="acidity" id="acidity4">
+							  <label class="form-check-label" for="acidity4">4</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="acidity" id="acidity5">
+							  <label class="form-check-label" for="acidity5">5</label>
+							</div>
+						</div>
+						<div class="mb-3">
+						  <label for="after_taste" class="form-label">After Taste</label>
+						  <br>
+						  <div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="after_taste" id="after_taste1">
+							  <label class="form-check-label" for="after_taste1">1</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="after_taste" id="after_taste2">
+							  <label class="form-check-label" for="after_taste2">2</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="after_taste" id="after_taste3">
+							  <label class="form-check-label" for="after_taste3">3</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="after_taste" id="after_taste4">
+							  <label class="form-check-label" for="after_taste4">4</label>
+							</div>
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="radio" name="after_taste" id="after_taste5">
+							  <label class="form-check-label" for="after_taste5">5</label>
+							</div>
+						</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" onclick="rekomendasi()" class="btn btn-primary">Cari</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		function rekomendasi(){
+			let flavor = 0;
+			if(document.getElementById("flavor1").checked == true){
+				flavor = 1;
+			}
+			else if(document.getElementById("flavor2").checked == true){
+				flavor = 2;
+			}
+			else if(document.getElementById("flavor3").checked == true){
+				flavor = 3;
+			}
+			else if(document.getElementById("flavor4").checked == true){
+				flavor = 4;
+			}
+			else if(document.getElementById("flavor5").checked == true){
+				flavor = 5;
+			}
+
+			let body = 0;
+			if(document.getElementById("body1").checked == true){
+				body = 1;
+			}
+			else if(document.getElementById("body2").checked == true){
+				body = 2;
+			}
+			else if(document.getElementById("body3").checked == true){
+				body = 3;
+			}
+			else if(document.getElementById("body4").checked == true){
+				body = 4;
+			}
+			else if(document.getElementById("body5").checked == true){
+				body = 5;
+			}
+
+			let sweetness = 0;
+			if(document.getElementById("sweetness1").checked == true){
+				sweetness = 1;
+			}
+			else if(document.getElementById("sweetness2").checked == true){
+				sweetness = 2;
+			}
+			else if(document.getElementById("sweetness3").checked == true){
+				sweetness = 3;
+			}
+			else if(document.getElementById("sweetness4").checked == true){
+				sweetness = 4;
+			}
+			else if(document.getElementById("sweetness5").checked == true){
+				sweetness = 5;
+			}
+
+			let acidity = 0;
+			if(document.getElementById("acidity1").checked == true){
+				acidity = 1;
+			}
+			else if(document.getElementById("acidity2").checked == true){
+				acidity = 2;
+			}
+			else if(document.getElementById("acidity3").checked == true){
+				acidity = 3;
+			}
+			else if(document.getElementById("acidity4").checked == true){
+				acidity = 4;
+			}
+			else if(document.getElementById("acidity5").checked == true){
+				acidity = 5;
+			}
+
+			let after_taste = 0;
+			if(document.getElementById("after_taste1").checked == true){
+				after_taste = 1;
+			}
+			else if(document.getElementById("after_taste2").checked == true){
+				after_taste = 2;
+			}
+			else if(document.getElementById("after_taste3").checked == true){
+				after_taste = 3;
+			}
+			else if(document.getElementById("after_taste4").checked == true){
+				after_taste = 4;
+			}
+			else if(document.getElementById("after_taste5").checked == true){
+				after_taste = 5;
+			}
+
+
+			console.log(after_taste);
+		}
+	</script>
+  </body>
+</html>
